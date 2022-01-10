@@ -64,9 +64,6 @@ function boot_container() {
    if ! container_running; then
       docker run -d -i \
          --name  $CONTAINER_NAME \
-         --mount type=bind,source=$HOME/s3/benchmarks/tpch/scripts,target=/benchmarks/tpch/scripts \
-         --mount type=bind,source=$HOME/s3/benchmarks/tpch/results,target=/benchmarks/tpch/results \
-         --mount type=bind,source=$HOME/s3/benchmarks/tpch/generated,target=/benchmarks/tpch/generated \
          --user=$USER_ID:$USER_GROUP \
          $IMAGE_NAME:$IMAGE_TAG
    fi
