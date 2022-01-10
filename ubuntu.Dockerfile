@@ -1,4 +1,4 @@
-FROM ubuntu:19.10
+FROM ubuntu:latest
 
 #ENV DEBIAN_FRONTEND noninteractive
 

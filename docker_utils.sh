@@ -15,7 +15,8 @@ function dockerd_running() {
 
 function build_image() {
    date_str=$(date '+%Y%m%d_%H:%M')
-   docker build -t "$IMAGE_NAME:$IMAGE_TAG" --progress plain  -f docker/$DOCKER_FILE_NAME . >"$PWD/$date_str.log" 2>"$PWD/$date_str.err"
+   docker build -t "$IMAGE_NAME:$IMAGE_TAG" --progress plain  -f $DOCKER_FILE_NAME .
+   #>"$PWD/$date_str.log" 2>"$PWD/$date_str.err"
 }
 
 function image_created() {
