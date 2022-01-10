@@ -25,6 +25,7 @@ RUN cd /opt                                                       &&\
     git clone https://github.com/hymir1990/watchdog.git           &&\
     cd watchdog                                                   &&\
     mkdir build                                                   &&\
+    cd build                                                      &&\
     cmake ..                                                      &&\
     make
 
